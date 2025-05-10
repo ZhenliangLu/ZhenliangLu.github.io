@@ -179,15 +179,12 @@
       const items = pubList.getElementsByTagName("li");
       const total = items.length;
     
-      // 多个非字母序条目的 index（从上往下数，0-based）
-      const specialIndices = [1, 4, 6]; // 代表从上往下第2、5、7项不是按字母序
+      // 手动指定非字母序作者顺序的条目（从上往下，0-based index）
+      const specialIndex = 1;
     
-      // 将 index 转换为 reversed 中的显示编号
-      const displayNumbers = specialIndices.map(i => total - i).sort((a, b) => a - b);
-    
-      // 转为格式 [2, 5, 7] → "[2], [5], [7]"
-      const formatted = displayNumbers.map(n => `[${n}]`).join(", ");
-      document.getElementById("manualOrderRef").textContent = formatted;
+      // <ol reversed> 的编号是从 total 到 1
+      const number = total - specialIndex;
+      document.getElementById("manualOrderRef").textContent = `[${number}]`;
     </script>
 
 

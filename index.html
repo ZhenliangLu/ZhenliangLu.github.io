@@ -155,18 +155,14 @@
             <b>ICDCS 2022</b> -- 42nd IEEE International Conference on Distributed Computing Systems
             <!-- <a href="https://dl.acm.org/doi/pdf/10.1145/3372297.3417262">[PDF]</a> -->
             </p></li>
-               
-            
-            
-            
+                       
             <li><p>
             Dumbo: Faster Asynchronous BFT Protocols<br>
             Bingyong Guo, <b>Zhenliang Lu</b>, Qiang Tang, Jing Xu, Zhenfeng Zhang<br>
             <b>CCS 2020</b> -- 27th ACM Conference of Computer and Communication Security
             <!--  <a href="https://dl.acm.org/doi/pdf/10.1145/3372297.3417262">[PDF]</a>-->
             </p></li>
-               
-            
+                        
             <li><p>
             Dumbo-MVBA: Optimal Multi-Valued Validated Asynchronous Byzantine Agreement, Revisited<br>
             Yuan Lu, <b>Zhenliang Lu</b>, Qiang Tang, Guiling Wang<br>
@@ -179,17 +175,20 @@
     </div>
 
      <script>
-  const pubList = document.getElementById("pubList");
-  const items = pubList.getElementsByTagName("li");
-  const total = items.length;
-
-  // 手动指定哪个条目是非字母顺序（从上往下数，第一个是 index 0）
-  const specialIndex = 1;
-
-  // 由于 <ol reversed>，我们要转换 index 为实际显示编号：
-  const number = total - specialIndex;
-  document.getElementById("manualOrderRef").textContent = `[${number}]`;
-</script>
+      const pubList = document.getElementById("pubList");
+      const items = pubList.getElementsByTagName("li");
+      const total = items.length;
+    
+      // 多个非字母序条目的 index（从上往下数，0-based）
+      const specialIndices = [1, 4, 6]; // 代表从上往下第2、5、7项不是按字母序
+    
+      // 将 index 转换为 reversed 中的显示编号
+      const displayNumbers = specialIndices.map(i => total - i).sort((a, b) => a - b);
+    
+      // 转为格式 [2, 5, 7] → "[2], [5], [7]"
+      const formatted = displayNumbers.map(n => `[${n}]`).join(", ");
+      document.getElementById("manualOrderRef").textContent = formatted;
+    </script>
 
 
 

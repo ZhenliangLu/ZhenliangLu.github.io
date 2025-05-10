@@ -84,9 +84,11 @@
         
         
     <div>
-       <h2><hr><a name="publication"></a>Publications <span style="font-size: small; color: black;">(Per crypto community convention, authorship is in alphabetical order except for <span class="cite-ref" id="cite-ref">[n]</span>)</span></h2>
+       <h2><hr><a name="publication"></a>Publications <span style="font-size: small; color: black;">(Per crypto community convention, authorship is in alphabetical order except for <span id="manualOrderRef"></span>)
+    </span>
+  </h2>
 
-        <ol reversed>
+        <ol id="pubList" reversed>
             <li><p>
             <i>Asynchronous Dynamic Committee Proactive Secret Sharing for Large Data</i><br>
             <b>Zhenliang Lu</b>, Tianyi Zhang, Alan Fekete, Kwok Yan Lam, Qiang Tang<br>
@@ -177,19 +179,18 @@
     </div>
 
      <script>
-      const pubList = document.getElementById('pub-list');
-      const items = pubList.getElementsByTagName('li');
-      const total = items.length;
-    
-      // 设置哪一项是非字母顺序：从上往下第几个（0-based index）
-      const exceptionIndexFromTop = 1; // 第二个
-    
-      // 由于是 reversed，显示编号是从 total 到 1
-      const reversedNumber = total - exceptionIndexFromTop;
-    
-      // 替换 [n] 为正确编号
-      document.getElementById('cite-ref').textContent = `[${reversedNumber}]`;
-      </script>
+  const pubList = document.getElementById("pubList");
+  const items = pubList.getElementsByTagName("li");
+  const total = items.length;
+
+  // 手动指定哪个条目是非字母顺序（从上往下数，第一个是 index 0）
+  const specialIndex = 1;
+
+  // 由于 <ol reversed>，我们要转换 index 为实际显示编号：
+  const number = total - specialIndex;
+  document.getElementById("manualOrderRef").textContent = `[${number}]`;
+</script>
+
 
 
     <div>

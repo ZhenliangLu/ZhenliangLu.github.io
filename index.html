@@ -84,11 +84,11 @@
         
         
     <div>
-       <h2><hr><a name="publication"></a>Publications <span style="font-size: small; color: black;">(Per crypto community convention, authorship is in alphabetical order except for <span id="manualOrderRef"></span>)
+       <h2><hr><a name="publication"></a>Publications <span style="font-size: small; color: black;">(Per crypto community convention, authorship is in alphabetical order except for [12])
     </span>
   </h2>
 
-        <ol id="pubList" reversed>
+        <ol reversed>
             <li><p>
             <i>Asynchronous Dynamic Committee Proactive Secret Sharing for Large Data</i><br>
             <b>Zhenliang Lu</b>, Tianyi Zhang, Alan Fekete, Kwok Yan Lam, Qiang Tang<br>
@@ -174,18 +174,7 @@
         </ol reversed>
     </div>
 
-     <script>
-      const pubList = document.getElementById("pubList");
-      const items = pubList.getElementsByTagName("li");
-      const total = items.length;
     
-      // 手动指定非字母序作者顺序的条目（从上往下，0-based index）
-      const specialIndex = 1;
-    
-      // <ol reversed> 的编号是从 total 到 1
-      const number = total - specialIndex;
-      document.getElementById("manualOrderRef").textContent = `[${number}]`;
-    </script>
 
 
 

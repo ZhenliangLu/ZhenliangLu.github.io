@@ -314,6 +314,12 @@ div#toptitle h1, #layout-content div#toptitle h1 {
 	border-bottom: none;
 }
 
+
+#page-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
 img.eq {
 	padding: 0;
 	padding-left: 0.1em;

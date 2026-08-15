@@ -1,7 +1,5 @@
 table#tlayout {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     border: none;
     border-collapse: separate;
     background: white;
@@ -11,7 +9,7 @@ body {
     background: white;
     font-family: Georgia, serif;
     margin: 0;
-    padding: 0 8%;
+    padding: 0 5%;
     padding-bottom: 8px;
     box-sizing: border-box;
 }

@@ -1,5 +1,7 @@
 table#tlayout {
-    width: 100%;
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
     border: none;
     border-collapse: separate;
     background: white;

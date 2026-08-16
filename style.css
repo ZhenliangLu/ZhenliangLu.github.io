@@ -360,6 +360,6 @@ table.imgtable, table.imgtable td {
 }
 
 
-#pubList li p {
-    margin-bottom: 2.8em;
+#pubList > li {
+    margin-bottom: 2em;
 }

@@ -359,3 +359,7 @@ table.imgtable, table.imgtable td {
     text-align: left;
 }
 
+
+#pubList li p {
+    margin-bottom: 0.8em;
+}
